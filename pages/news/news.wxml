@@ -1,0 +1,24 @@
+<!--pages/news/news.wxml-->
+<import src="news-item-template/news-item-template.wxml" />
+<view>
+    <swiper vertical="{{false}}" autoplay="true" interval="5000" indicator-dots="true" catchtap="onSwiperTap">
+        <swiper-item>
+            <image src="/images/news/car.jpg" data-newsId = "3"></image>
+            <text data-newsId = "3">世界上最有钱的国家之一 国民却买不起汽车</text>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/news/tang.jpg" data-newsId = "4"></image>
+            <text data-newsId = "4">唐嫣现身美得发光 黑衣红唇气质飙升</text>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/news/love.jpg" data-newsId = "5"></image>
+            <text data-newsId = "5">爱情的本质 被佛陀一语道破!</text>
+        </swiper-item>
+    </swiper>
+</view>
+<block wx:for="{{newsData}}" >
+    <view catchtap="onNewsTap" data-newsId = "{{item.newsId}}" >
+       <template is="newsItem" data="{{...item}}"/>       
+    </view>
+</block>
+
