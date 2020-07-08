@@ -8,7 +8,7 @@ Page({
   },
   onLoad: function (options) {
     var movieId = options.id;
-    var url = doubanBase+"/v2/movie/subject/"+ movieId;
+    var url = doubanBase + "/v2/movie/subject/" + movieId + "?apikey=0df993c66c0c636e29ecbb5344252a4a";
     utils.http(url, this.processDoubanData);
   },
   processDoubanData:function(data){    

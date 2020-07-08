@@ -14,9 +14,9 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
-    var inTheatersUrl = doubanBase + "/v2/movie/in_theaters?start=0&count=3";
-    var comingSoonUrl = doubanBase + "/v2/movie/coming_soon?start=0&count=3";
-    var top250Url = doubanBase + "/v2/movie/top250?start=0&count=3";
+    var inTheatersUrl = doubanBase + "/v2/movie/in_theaters?apikey=0df993c66c0c636e29ecbb5344252a4a&start=0&count=3";
+    var comingSoonUrl = doubanBase + "/v2/movie/coming_soon?apikey=0df993c66c0c636e29ecbb5344252a4a&start=0&count=3";
+    var top250Url = doubanBase + "/v2/movie/top250?apikey=0df993c66c0c636e29ecbb5344252a4a&start=0&count=3";
     this.getMovieListData(inTheatersUrl,"in_theaters","正在热映");
     this.getMovieListData(comingSoonUrl,"coming_soon","即将上映");
     this.getMovieListData(top250Url,"top250","top250");

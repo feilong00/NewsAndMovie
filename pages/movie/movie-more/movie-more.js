@@ -12,7 +12,7 @@ Page({
     var that = this;
     var category = options.id;
     var title = options.title;
-    var dataUrl = doubanBase + "/v2/movie/" + category;
+    var dataUrl = doubanBase + "/v2/movie/" + category + "?apikey=0df993c66c0c636e29ecbb5344252a4a";
     this.data.requestUrl = dataUrl;
     wx.setNavigationBarTitle({
       title: title
