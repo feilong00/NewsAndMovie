@@ -21,7 +21,7 @@ Page({
     wx.showNavigationBarLoading();
   },
   onScrollLower: function () {
-    var nextUrl = this.data.requestUrl + "?start=" + this.data.totalCount + "&count=20";
+    var nextUrl = this.data.requestUrl + "&start=" + this.data.totalCount + "&count=20";
     utils.http(nextUrl, this.processDoubanData);
     wx.showNavigationBarLoading();
   },
